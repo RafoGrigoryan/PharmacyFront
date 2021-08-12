@@ -1,0 +1,63 @@
+.popup-registr{
+    display: none;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(198, 177, 233,.5);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position:absolute;
+}
+.popup-registr .popup{
+    display: flex;
+    justify-content:start;
+    align-items: center ;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    background-color: rgb(245, 231, 231);
+}
+.popup-registr .popup .close{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.popup-registr .popup .close button{
+    background-color: red;
+}
+.popup-registr .popup .title{
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+}
+.popup-registr .popup .inputs{
+    display: flex;
+    height: 300px;
+    margin: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popup-registr .popup .inputs div{
+    text-align: center;
+}
+.popup-registr .popup .inputs div p{
+    margin: 10px 0px 0px 0px;
+    padding: 0%;
+}
+.popup-registr .popup .inputs div input{
+    height: 20px;
+    width: 250px;
+}
+.popup-registr .popup .inputs div pre{
+    display: none;
+    margin: 0%;
+    padding: 0%;
+}
+.popup-registr .popup .inputs div button{
+    padding: 3px 30px;
+    background-color: green;
+    color: white;
+}
+

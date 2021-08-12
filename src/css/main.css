@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+}
+.main .left-side{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(202, 243, 164);
+}
+.main .right-side{
+    width: 20%;
+    height: 100%;
+    background-color:rgb(202, 243, 164);   
+}
+.main .middle{
+    width: 59%;
+    height: 100%;
+    background-color: rgb(159, 255, 175);
+    text-align: center;
+}
+.main .middle .search input{
+    height: 30px;
+    width: 80%;
+    list-style: none;
+    text-decoration: none;
+    
+}
+.main .middle .search button{
+    height: 35px;
+    width: 40px;
+}
+.main .middle .search img{
+    height: 10px;
+    width: 10px;
+}

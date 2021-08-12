@@ -1,2 +1,5 @@
-@import 'header.css';
-@import 'loginPopup.css';
+@import './css/header.css';
+@import './css/loginPopup.css';
+@import './css/registrPopup.css';
+@import './css/main.css';
+@import './css/footer.css';

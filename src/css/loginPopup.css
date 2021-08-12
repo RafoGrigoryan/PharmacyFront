@@ -1,0 +1,47 @@
+.popup-login{
+    display: none;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(198, 177, 233,.5);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position:absolute;
+   
+}
+.popup-login .parent-form{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(245, 231, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.popup-login .parent-form .close{
+    height: 150px;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+}
+.popup-login .parent-form .close button{
+    background-color: red;
+}
+
+.popup-login>div>div{
+   text-align: center;
+}
+
+.popup-login input{
+    height: 20px;
+    width: 200px;
+    margin: 10px;
+}
+.popup-login .login-btn button {
+    width: 100px;
+    border-radius: 10%;
+    background-color: green;
+}
+
