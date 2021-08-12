@@ -3,6 +3,26 @@ import { useState } from "react"
 export function PopupRegistr(){
    const [value,setvalue]= useState("");
 
+   function handleRegisterSubmit() {
+       const name = document.querySelector(".name-input").value;
+       const surname = document.querySelector(".surname-input").value;
+       const email = document.querySelector(".email-input").value;
+       const login = document.querySelector(".login-input").value;
+       const password = document.querySelector(".password-input").value;
+       const registerData={
+           name,
+           surname,
+           email,
+           login,
+           password
+       }
+       const userDataJson = JSON.stringify(registerData);
+       fetch("http/localhost:8080/create/user",{
+           method:'POST',
+           body:userDataJson
+       }
+       ).then(res=>console.log(res.text))
+   }
 
     return(
         <div className="popup-registr">
@@ -19,7 +39,7 @@ export function PopupRegistr(){
 
                     <div>
                         <p>name</p>
-                        <input type="text" placeholder="name" onClick={()=>{
+                        <input type="text" placeholder="name" className="name-input"onClick={()=>{
                         document.querySelector('.popup-registr .popup .inputs div .surname').style.display="none"
                         document.querySelector('.popup-registr .popup .inputs div .email').style.display="none"
                         document.querySelector('.popup-registr .popup .inputs div .login').style.display="none"
@@ -32,7 +52,7 @@ export function PopupRegistr(){
 
                     <div>
                         <p>surname</p>
-                        <input type="text" placeholder="surname" onClick={()=>{
+                        <input type="text" placeholder="surname" className="surname-input" onClick={()=>{
                          document.querySelector('.popup-registr .popup .inputs div .name').style.display="none"
                          document.querySelector('.popup-registr .popup .inputs div .email').style.display="none"
                          document.querySelector('.popup-registr .popup .inputs div .login').style.display="none"
@@ -44,8 +64,8 @@ export function PopupRegistr(){
                         </div>
 
                     <div>
-                        <p>emali</p>
-                        <input type="email" placeholder="email" onClick={()=>{
+                        <p>email</p>
+                        <input type="email" placeholder="email" className="email-input" onClick={()=>{
                          document.querySelector('.popup-registr .popup .inputs div .name').style.display="none"
                          document.querySelector('.popup-registr .popup .inputs div .surname').style.display="none"
                          document.querySelector('.popup-registr .popup .inputs div .login').style.display="none"
@@ -58,7 +78,7 @@ export function PopupRegistr(){
 
                     <div>
                         <p>login</p>
-                        <input type="text" placeholder="login" onClick={()=>{
+                        <input type="text" placeholder="login" className="login-input" onClick={()=>{
                        document.querySelector('.popup-registr .popup .inputs div .name').style.display="none"
                        document.querySelector('.popup-registr .popup .inputs div .surname').style.display="none"
                        document.querySelector('.popup-registr .popup .inputs div .email').style.display="none"
@@ -72,9 +92,8 @@ export function PopupRegistr(){
                     <div>
                         
                         <p>password</p>
-                        <input type="password" value={value} placeholder="password" onChange={(event)=>{
-                            setvalue=event.target.value;
-                        }} onClick={()=>{
+                        <input type="password" placeholder="password" className="password-input"    
+                        onClick={()=>{
                         document.querySelector('.popup-registr .popup .inputs div .name').style.display="none"
                         document.querySelector('.popup-registr .popup .inputs div .surname').style.display="none"
                         document.querySelector('.popup-registr .popup .inputs div .email').style.display="none"
@@ -99,7 +118,7 @@ export function PopupRegistr(){
                         </div>
 
                        
-                    <div><button>send</button></div>
+                    <div><button onClick={handleRegisterSubmit}>send</button></div>
                 </div>
                 </div> 
         </div>
